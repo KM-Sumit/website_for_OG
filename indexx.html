@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>सुदेश राय | विधायक सीहोर | जनसेवा</title>
+    <style>
+        :root {
+            --o: #df4819;
+            --dark: #241f1c;
+            --muted: #766e68;
+            --bg: #faf8f6;
+            --line: #e9e1dc
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, "Noto Sans Devanagari", "Nirmala UI", sans-serif;
+            color: var(--dark);
+            background: #fff;
+            line-height: 1.65;
+            overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        img {
+            max-width: 100%;
+            height: auto
+        }
+
+        .wrap {
+            width: min(1200px, calc(100% - 32px));
+            margin: auto
+        }
+
+        /* ── HEADER / NAV ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background: #fff;
+            border-bottom: 1px solid var(--line)
+        }
+
+        nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px
+        }
+
+        .logo {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-weight: 800;
+            min-width: 0
+        }
+
+        .logo span {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .logo i {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            border-radius: 12px;
+            background: var(--o);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-style: normal
+        }
+
+        .logo small {
+            display: block;
+            color: #777;
+            font-size: 10px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 4px
+        }
+
+        .navlinks a {
+            padding: 9px 12px;
+            border-radius: 9px;
+            color: #5f5853;
+            font-size: 14px;
+            white-space: nowrap
+        }
+
+        .navlinks a:hover,
+        .navlinks a.active {
+            color: var(--o);
+            background: #fff2ec
+        }
+
+        .menu {
+            display: none;
+            border: 1px solid var(--line);
+            background: white;
+            padding: 9px 12px;
+            border-radius: 9px;
+            font-size: 22px;
+            cursor: pointer;
+            min-width: 44px;
+            min-height: 44px;
+            line-height: 1
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: #31231d;
+            overflow: hidden
+        }
+
+        .hero>img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: none
+        }
+
+        .hero:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(18, 10, 7, .86), rgba(18, 10, 7, .52), rgba(18, 10, 7, .12))
+        }
+
+        .hero .wrap {
+            position: relative;
+            z-index: 2;
+            color: #fff
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(223, 72, 25, .45);
+            padding: 7px 13px;
+            border-radius: 30px;
+            font-size: 13px
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 7vw, 82px);
+            line-height: 1;
+            margin: 22px 0 16px;
+            letter-spacing: -2px
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: #eee
+        }
+
+        .pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .pill {
+            border: 1px solid #ffffff40;
+            background: #ffffff18;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 11px;
+            font-weight: 800;
+            font-size: 14px;
+            margin: 8px 6px 0 0;
+            text-align: center
+        }
+
+        .primary {
+            background: var(--o);
+            color: #fff
+        }
+
+        .outline {
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--o)
+        }
+
+        /* ── STATS ── */
+        .stats {
+            border-bottom: 1px solid var(--line)
+        }
+
+        .statsgrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr)
+        }
+
+        .stat {
+            text-align: center;
+            padding: 28px 10px;
+            border-right: 1px solid var(--line)
+        }
+
+        .stat:last-child {
+            border-right: 0
+        }
+
+        .stat b {
+            display: block;
+            color: var(--o);
+            font-size: 40px
+        }
+
+        .stat span {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 85px 0
+        }
+
+        .soft {
+            background: var(--bg)
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 42px
+        }
+
+        .heading small,
+        .kicker {
+            color: var(--o);
+            font-weight: 900
+        }
+
+        .heading h2,
+        .pagehero h1 {
+            font-size: clamp(26px, 5vw, 52px);
+            line-height: 1.1;
+            margin: 8px 0
+        }
+
+        .heading p,
+        .copy p {
+            color: var(--muted)
+        }
+
+        /* ── GRID & CARDS ── */
+        .grid2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center
+        }
+
+        .photo {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 55px #39251b15
+        }
+
+        .photo img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden
+        }
+
+        .card:hover {
+            box-shadow: 0 15px 45px #3a241814;
+            transform: translateY(-3px);
+            transition: .2s
+        }
+
+        .card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover
+        }
+
+        .cardbody {
+            padding: 20px
+        }
+
+        .card h3 {
+            margin: 5px 0;
+            font-size: 19px
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .tag {
+            color: var(--o);
+            font-size: 11px;
+            font-weight: 800
+        }
+
+        /* ── PAGES ── */
+        .page {
+            display: none
+        }
+
+        .page.active {
+            display: block
+        }
+
+        .pagehero {
+            padding: 75px 0;
+            background: linear-gradient(135deg, #fff3ed, #fff);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .pagehero p {
+            max-width: 700px;
+            color: var(--muted)
+        }
+
+        /* ── TIMELINE ── */
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            border-left: 2px solid #f0d8cc;
+            padding-left: 28px
+        }
+
+        .time {
+            position: relative;
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 20px;
+            border-radius: 16px;
+            margin: 0 0 20px
+        }
+
+        .time:before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 24px;
+            width: 18px;
+            height: 18px;
+            background: var(--o);
+            border: 4px solid #fff;
+            border-radius: 50%
+        }
+
+        .time small {
+            color: var(--o);
+            font-weight: 900
+        }
+
+        /* ── GALLERY ── */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer
+        }
+
+        /* ── CONTACT ── */
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 22px
+        }
+
+        .contactbox {
+            border: 1px solid var(--line);
+            padding: 28px;
+            border-radius: 18px;
+            word-break: break-word
+        }
+
+        .contactbox p {
+            color: var(--muted)
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .social {
+            padding: 11px 17px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            font-weight: 700;
+            background: #fff
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--o)
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 45px 0;
+            background: #fff
+        }
+
+        .footgrid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+            gap: 30px
+        }
+
+        .footgrid h4 {
+            margin-top: 0
+        }
+
+        .footgrid p,
+        .footgrid li {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        ul {
+            padding: 0;
+            list-style: none
+        }
+
+        li {
+            margin: 7px 0
+        }
+
+        .bottom {
+            border-top: 1px solid var(--line);
+            margin-top: 30px;
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 12px;
+            flex-wrap: wrap;
+            gap: 6px
+        }
+
+        /* ── LIGHTBOX ── */
+        .light {
+            position: fixed;
+            inset: 0;
+            background: #000d;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            padding: 20px
+        }
+
+        .light.show {
+            display: flex
+        }
+
+        .light img {
+            max-width: 92%;
+            max-height: 88%;
+            border-radius: 12px
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            border: 0;
+            background: #ffffff22;
+            color: #fff;
+            font-size: 30px;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer
+        }
+
+        /* ═══════════════════════════════════
+   TABLET — max-width: 850px
+   ═══════════════════════════════════ */
+        @media(max-width:850px) {
+            .navlinks {
+                display: none
+            }
+
+            .menu {
+                display: block
+            }
+
+            .navlinks.mobile {
+                display: grid;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 12px 16px;
+                border-bottom: 1px solid var(--line);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+                z-index: 100;
+                gap: 2px
+            }
+
+            .navlinks.mobile a {
+                padding: 14px 16px;
+                font-size: 16px;
+                border-radius: 10px
+            }
+
+            .statsgrid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0
+            }
+
+            .grid2 {
+                grid-template-columns: 1fr;
+                gap: 30px
+            }
+
+            .contact {
+                grid-template-columns: 1fr
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .footgrid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px
+            }
+
+            section {
+                padding: 55px 0
+            }
+
+            .pagehero {
+                padding: 50px 0
+            }
+
+            .hero {
+                min-height: 500px
+            }
+
+            .grid2 {
+                gap: 30px
+            }
+        }
+
+        /* ═══════════════════════════════════
+   MOBILE — max-width: 560px
+   ═══════════════════════════════════ */
+        @media(max-width:560px) {
+            .wrap {
+                width: calc(100% - 24px)
+            }
+
+            /* Nav */
+            nav {
+                height: 60px
+            }
+
+            .logo i {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+                font-size: 13px
+            }
+
+            .logo span {
+                font-size: 14px
+            }
+
+            .logo small {
+                font-size: 9px
+            }
+
+            .navlinks.mobile {
+                top: 60px
+            }
+
+            /* Hero */
+            .hero {
+                min-height: auto;
+                padding: 70px 0 60px
+            }
+
+            .hero>img {
+                object-position: 70% center
+            }
+
+            .hero:after {
+                background: linear-gradient(90deg, rgba(18, 10, 7, .95) 0%, rgba(18, 10, 7, .75) 50%, rgba(18, 10, 7, .1) 100%)
+            }
+
+            .hero h1 {
+                font-size: clamp(30px, 10vw, 45px);
+                letter-spacing: -1px;
+                margin: 14px 0 12px
+            }
+
+            .hero p {
+                font-size: 14px;
+                line-height: 1.6
+            }
+
+            .badge {
+                font-size: 11px;
+                padding: 5px 10px
+            }
+
+            .pills {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start
+            }
+
+            .pill {
+                font-size: 11px;
+                padding: 5px 10px
+            }
+
+            .btn {
+                padding: 12px 18px;
+                font-size: 13px;
+                margin: 6px 6px 0 0;
+                width: auto
+            }
+
+            /* Stats */
+            .statsgrid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .stat {
+                padding: 18px 8px
+            }
+
+            .stat b {
+                font-size: 28px
+            }
+
+            .stat span {
+                font-size: 11px
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0
+            }
+
+            /* Sections */
+            section {
+                padding: 40px 0
+            }
+
+            .heading {
+                margin-bottom: 28px
+            }
+
+            .heading h2,
+            .pagehero h1 {
+                font-size: clamp(22px, 7vw, 32px)
+            }
+
+            .pagehero {
+                padding: 40px 0
+            }
+
+            .pagehero p {
+                font-size: 14px
+            }
+
+            /* Cards */
+            .cards {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+
+            .card img {
+                height: 180px
+            }
+
+            .cardbody {
+                padding: 16px
+            }
+
+            .card h3 {
+                font-size: 17px
+            }
+
+            .card p {
+                font-size: 13px
+            }
+
+            /* Grid 2-col → 1-col */
+            .grid2 {
+                gap: 24px
+            }
+
+            .photo {
+                border-radius: 16px
+            }
+
+            /* Timeline */
+            .timeline {
+                padding-left: 20px
+            }
+
+            .time {
+                padding: 14px
+            }
+
+            .time:before {
+                left: -31px;
+                width: 14px;
+                height: 14px;
+                border-width: 3px
+            }
+
+            .time h3 {
+                font-size: 16px
+            }
+
+            .time p {
+                font-size: 13px
+            }
+
+            /* Gallery */
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px
+            }
+
+            .gallery img {
+                border-radius: 10px
+            }
+
+            /* Contact */
+            .contactbox {
+                padding: 18px;
+                border-radius: 14px
+            }
+
+            .contactbox h2 {
+                font-size: 20px
+            }
+
+            .social {
+                padding: 10px 14px;
+                font-size: 13px
+            }
+
+            /* Footer */
+            .footgrid {
+                grid-template-columns: 1fr;
+                gap: 24px
+            }
+
+            footer {
+                padding: 30px 0
+            }
+
+            .bottom {
+                display: block;
+                text-align: center
+            }
+
+            .bottom span {
+                display: block;
+                margin-top: 7px
+            }
+
+            /* Lightbox */
+            .light img {
+                max-width: 96%;
+                max-height: 80%
+            }
+
+            .close {
+                right: 10px;
+                top: 10px;
+                width: 38px;
+                height: 38px;
+                font-size: 24px
+            }
+        }
+
+        /* ═══════════════════════════════════
+   SMALL PHONES — max-width: 380px
+   ═══════════════════════════════════ */
+        @media(max-width:380px) {
+            .wrap {
+                width: calc(100% - 16px)
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                letter-spacing: -1px
+            }
+
+            .hero p {
+                font-size: 13px
+            }
+
+            .pill {
+                font-size: 9px;
+                padding: 4px 7px
+            }
+
+            .btn {
+                display: block;
+                text-align: center;
+                margin: 6px 0 0
+            }
+
+            .stat b {
+                font-size: 24px
+            }
+
+            .stat span {
+                font-size: 10px
+            }
+
+            .heading h2,
+            .pagehero h1 {
+                font-size: 22px
+            }
+
+            .card img {
+                height: 150px
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px
+            }
+
+            .contactbox {
+                padding: 14px
+            }
+
+            .time {
+                padding: 12px
+            }
+
+            .timeline {
+                padding-left: 16px
+            }
+
+            .time:before {
+                left: -27px;
+                width: 12px;
+                height: 12px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap">
+            <nav>
+                <a class="logo" href="#home"><i>SR</i><span>Sudesh Rai<small>विधायक | सीहोर (म.प्र.)</small></span></a>
+                <div class="navlinks" id="nav">
+                    <a href="#home">होम</a><a href="#about">परिचय</a><a href="#journey">यात्रा</a><a
+                        href="#events">कार्यक्रम</a><a href="#news">समाचार</a><a href="#gallery">यादें</a><a
+                        href="#contact">संपर्क</a>
+                </div>
+                <button class="menu" onclick="toggleMenu()">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <img src="mainIMG.png" alt="Sudesh Rai">
+                <div class="wrap">
+                    <span class="badge">● मोदी का परिवार | जनसेवक</span>
+                    <h1>सुदेश राय</h1>
+                    <div class="pills"><span class="pill">विधायक — सीहोर विधानसभा क्षेत्र (तीसरी बार)</span><span
+                            class="pill">भारतीय जनता पार्टी (भाजपा)</span><span class="pill">व्यवसायी एवं राजनेता — सीहोर</span></div>
+                    <p>भारतीय जनता पार्टी के समर्पित जनसेवक एवं सीहोर विधानसभा क्षेत्र के तीन बार के विधायक। 2023 में 1,05,997 मतों से भारी जीत। सीहोर के सर्वांगीण विकास के लिए संकल्पित।</p>
+                    <a class="btn primary" href="#journey">राजनीतिक यात्रा →</a><a class="btn outline" href="#events">कार्यक्रम देखें</a>
+                </div>
+            </section>
+            <div class="stats">
+                <div class="wrap statsgrid">
+                    <div class="stat"><b>3 बार</b><span>विधायक सीहोर</span></div>
+                    <div class="stat"><b>1,05,997</b><span>मत (2023 चुनाव)</span></div>
+                    <div class="stat"><b>113 Cr+</b><span>विकास कार्य</span></div>
+                    <div class="stat"><b>100%</b><span>समर्पण जनता के लिए</span></div>
+                </div>
+            </div>
+
+            <section>
+                <div class="wrap grid2">
+                    <div class="photo"><img src="image.png"></div>
+                    <div class="copy"><span class="kicker">परिचय</span>
+                        <h2>जनता की आवाज़, विकास का संकल्प</h2>
+                        <p>विकास प्रिंस राठौर जी ने अगस्त 2022 में सीहोर नगर पालिका अध्यक्ष का पदभार ग्रहण किया। उनका
+                            मुख्य लक्ष्य "ग्रीन सीहोर - क्लीन सीहोर" अभियान के अंतर्गत शहर को देश में सबसे स्वच्छ और
+                            सुंदर बनाना है।</p>
+                        <p>स्वच्छता सर्वेक्षण 2024-25 में सीहोर को मध्य प्रदेश में पहला और देश में छठवां स्थान प्राप्त
+                            हुआ है, जो उनके कुशल नेतृत्व का प्रमाण है।</p><a class="btn outline" href="#about">विकास
+                            प्रिंस राठौर के बारे में और जानें →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="soft">
+                <div class="wrap">
+                    <div class="heading"><span>उद्देश्य</span>
+                        <h2>विकास और स्वच्छता का संकल्प</h2>
+                        <p>वे मूल सिद्धांत जो सीहोर के विकास को गति दे रहे हैं।</p>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="cardbody">
+                                <h3>◎ ग्रीन सीहोर - क्लीन सीहोर</h3>
+                                <p>रोड स्वीपिंग मशीन और निरंतर सफाई अभियानों के माध्यम से शहर को स्वच्छ बनाना।</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="cardbody">
+                                <h3>♡ ढांचागत विकास</h3>
+                                <p>वार्डों में सीसी रोड, पुलिया, और पेवर ब्लॉक निर्माण के लिए भूमि पूजन और तेजी से
+                                    कार्य।</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="cardbody">
+                                <h3>🏆 जनता से जुड़ाव</h3>
+                                <p>कावड़ यात्रा, रथ यात्रा और विभिन्न धार्मिक आयोजनों में जनता के साथ सहभागिता।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="eventsPreview">
+                <div class="wrap">
+                    <div class="heading"><span>आयोजन</span>
+                        <h2>कार्यक्रम एवं भूमि पूजन</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="card"><img src="road_construction.png">
+                            <div class="cardbody"><span class="tag">7 अप्रैल 2025</span>
+                                <h3>भाजपा का 46वां स्थापना दिवस</h3>
+                                <p>वार्ड 15 के बूथ 211, 215, 216 में कार्यकर्ताओं के साथ बैठक और स्थापना दिवस पर चर्चा।
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card"><img src="road_construction.png">
+                            <div class="cardbody"><span class="tag">जून-जुलाई 2023</span>
+                                <h3>विभिन्न वार्डों में विकास कार्य</h3>
+                                <p>वार्ड 17, 20, 12, 11, और 4 में सीसी रोड, नाली, और पुलिया निर्माण हेतु भूमि पूजन।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="soft">
+                <div class="wrap">
+                    <div class="heading"><span>अपडेट रहें</span>
+                        <h2>ताज़ा समाचार</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="card"><img src="chandrayaan.png">
+                            <div class="cardbody"><span class="tag">SWACHHATA</span>
+                                <h3>सीहोर को मिला स्वच्छता में मुकाम</h3>
+                                <p>स्वच्छता सर्वेक्षण 2024-25 में सीहोर नगर पालिका को देश में 6वां और म.प्र. में पहला
+                                    स्थान।</p>
+                            </div>
+                        </div>
+                        <div class="card"><img src="cm_meeting.png">
+                            <div class="cardbody"><span class="tag">DEVELOPMENT</span>
+                                <h3>CM से 50 करोड़ की मांग</h3>
+                                <p>CM डॉ. मोहन यादव के सीहोर आगमन पर स्वागत और विकास कार्यों के लिए 50 करोड़ की मांग।
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card"><img src="chandrayaan.png">
+                            <div class="cardbody"><span class="tag">CELEBRATION</span>
+                                <h3>चंद्रयान-3 सफलता पर जुलूस</h3>
+                                <p>चंद्रयान-3 की ऐतिहासिक सफलता पर सीहोर में विजय जुलूस और बधाइयाँ।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="wrap">
+                    <div class="heading"><span>संपर्क</span>
+                        <h2>अपनी समस्या या सुझाव भेजें</h2>
+                    </div>
+                    <div class="contactbox" style="max-width:600px;margin:auto">
+                        <form action="https://formsubmit.co/sumitmewada2003@gmail.com" method="POST"
+                            class="contact-form"><input type="text" name="Name" placeholder="आपका नाम" required><input
+                                type="text" name="Mobile_Number" placeholder="मोबाइल नंबर" required><textarea
+                                name="Problem_or_Suggestion" placeholder="अपनी समस्या या सुझाव लिखें..." rows="4"
+                                required></textarea><input type="hidden" name="_captcha" value="false"><input
+                                type="hidden" name="_subject" value="New Website Submission"><input type="hidden"
+                                name="_next" value="https://sehore-bro.vercel.app/"><button type="submit"
+                                class="btn primary" style="width:100%;margin:0">संदेश भेजें</button></form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ABOUT -->
+        <div id="about" class="page">
+            <section class="pagehero">
+                <div class="wrap"><span class="kicker">परिचय</span>
+                    <h1>नगर पालिका अध्यक्ष सीहोर</h1>
+                    <p>विकास प्रिंस राठौर के सार्वजनिक जीवन और जनसेवा से संबंधित परिचय।</p>
+                </div>
+            </section>
+            <section>
+                <div class="wrap grid2">
+                    <div class="photo"><img src="image.png"></div>
+                    <div class="copy"><span class="kicker">विकास प्रिंस राठौर</span>
+                        <h2>जनसेवा एवं सीहोर का विकास</h2>
+                        <p>विकास प्रिंस राठौर सीहोर नगर पालिका परिषद के अध्यक्ष हैं। वे वार्ड क्र. 15 सीहोर से निर्विरोध
+                            पार्षद चुने गए थे।</p>
+                        <p>वे पूर्व में भाजपा नगर मंडल सीहोर के अध्यक्ष और भाजपा युवा मोर्चा सीहोर के जिला अध्यक्ष भी रह
+                            चुके हैं। अगस्त 2022 में उन्होंने नगर पालिका अध्यक्ष का पदभार संभाला और तब से लगातार शहर के
+                            विकास कार्यों में सक्रिय हैं।</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- JOURNEY -->
+        <div id="journey" class="page">
+            <section class="pagehero">
+                <div class="wrap"><span class="kicker">यात्रा</span>
+                    <h1>सार्वजनिक जीवन की यात्रा</h1>
+                    <p>संगठन और जनसेवा में निभाई गई प्रमुख जिम्मेदारियां।</p>
+                </div>
+            </section>
+            <section>
+                <div class="wrap timeline">
+                    <div class="time"><small>वर्तमान जिम्मेदारी (अगस्त 2022 से)</small>
+                        <h3>अध्यक्ष — नगर पालिका परिषद सीहोर</h3>
+                        <p>सीहोर शहर के विकास और स्वच्छता को नई दिशा देने का कार्य।</p>
+                    </div>
+                    <div class="time"><small>वर्तमान</small>
+                        <h3>निर्विरोध पार्षद — वार्ड क्र.15 सीहोर</h3>
+                        <p>अपने वार्ड की जनता के विश्वास का प्रतीक, निर्विरोध निर्वाचन।</p>
+                    </div>
+                    <div class="time"><small>पूर्व जिम्मेदारी</small>
+                        <h3>पूर्व अध्यक्ष — भाजपा नगर मंडल सीहोर</h3>
+                        <p>पार्टी संगठन को मजबूती प्रदान करने में अहम भूमिका।</p>
+                    </div>
+                    <div class="time"><small>पूर्व जिम्मेदारी</small>
+                        <h3>पूर्व जिला अध्यक्ष — भाजपा युवा मोर्चा सीहोर</h3>
+                        <p>युवाओं को संगठित कर पार्टी विचारधारा को आगे बढ़ाने का कार्य।</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- EVENTS -->
+        <div id="events" class="page">
+            <section class="pagehero">
+                <div class="wrap"><span class="kicker">कार्यक्रम</span>
+                    <h1>कार्यक्रम और आयोजन</h1>
+                    <p>प्रमुख विकास कार्य और जन-सहभागिता के कार्यक्रम।</p>
+                </div>
+            </section>
+            <section>
+                <div class="wrap cards">
+                    <div class="card"><img src="road_construction.png">
+                        <div class="cardbody"><span class="tag">7 अप्रैल 2025</span>
+                            <h3>भाजपा स्थापना दिवस</h3>
+                            <p>वार्ड 15 के विभिन्न बूथों में कार्यकर्ताओं के साथ स्थापना दिवस पर महत्वपूर्ण बैठक।</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="road_construction.png">
+                        <div class="cardbody"><span class="tag">जून-जुलाई 2023</span>
+                            <h3>वार्डों में विकास कार्यों का भूमि पूजन</h3>
+                            <p>वार्ड 4, 11, 12, 15, 17, 18, 20 में सीसी रोड, नाली, पुलिया, पेवर ब्लॉक आदि के निर्माण
+                                कार्यों का शुभारंभ।</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="rath_yatra.png">
+                        <div class="cardbody"><span class="tag">20 जून 2023</span>
+                            <h3>भगवान श्री जगन्नाथ रथ यात्रा</h3>
+                            <p>रथ यात्रा का स्वागत, यात्रा के पीछे सफाई अभियान, और भंडारे की व्यवस्था।</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="cm_meeting.png">
+                        <div class="cardbody"><span class="tag">अगस्त 2022</span>
+                            <h3>बाढ़ राहत शिविर व्यवस्था</h3>
+                            <p>आपदा के समय जनता की सेवा के लिए बाढ़ राहत शिविरों का आयोजन और व्यवस्था।</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- NEWS -->
+        <div id="news" class="page">
+            <section class="pagehero">
+                <div class="wrap"><span class="kicker">समाचार</span>
+                    <h1>ताज़ा समाचार</h1>
+                    <p>उपलब्ध समाचार और प्रेस सामग्री का संग्रह।</p>
+                </div>
+            </section>
+            <section>
+                <div class="wrap cards">
+                    <div class="card"><img src="chandrayaan.png">
+                        <div class="cardbody"><span class="tag">PRESS</span>
+                            <h3>सीहोर को मिला स्वच्छता में 6ठा स्थान</h3>
+                            <p>स्वच्छता सर्वेक्षण 2024-25 में सीहोर नगर पालिका को देश में 6वां और म.प्र. में प्रथम स्थान
+                                प्राप्त हुआ। प्रेसवार्ता में नंबर 1 बनने का लक्ष्य रखा गया।</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="cm_meeting.png">
+                        <div class="cardbody"><span class="tag">PRESS</span>
+                            <h3>CM के आगमन पर 50 करोड़ का ज्ञापन</h3>
+                            <p>मुख्यमंत्री डॉ. मोहन यादव के सीहोर आगमन पर स्वागत किया गया और शहर के विकास हेतु 50 करोड़
+                                की मांग रखी गई।</p>
+                        </div>
+                    </div>
+                    <div class="card"><img src="road_construction.png">
+                        <div class="cardbody"><span class="tag">PRESS</span>
+                            <h3>स्वच्छता समीक्षा बैठक और अभियान</h3>
+                            <p>रोड स्वीपिंग मशीन से सड़क सफाई और "ग्रीन सीहोर-क्लीन सीहोर" के तहत निरंतर निरीक्षण।</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- GALLERY -->
+        <div id="gallery" class="page">
+            <section class="pagehero">
+                <div class="wrap"><span class="kicker">गैलरी</span>
+                    <h1>यादगार पल</h1>
+                    <p>सामुदायिक पहलों, कार्यक्रमों और विकास कार्यों की एक झलक।</p>
+                </div>
+            </section>
+            <section>
+                <div class="wrap gallery">
+                    <img onclick="openImg(this.src)" src="road_construction.png">
+                    <img onclick="openImg(this.src)" src="rath_yatra.png">
+                    <img onclick="openImg(this.src)" src="rath_yatra.png">
+                    <img onclick="openImg(this.src)" src="chandrayaan.png">
+                    <img onclick="openImg(this.src)" src="cm_meeting.png">
+                    <img onclick="openImg(this.src)" src="chandrayaan.png">
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT -->
+        <div id="contact" class="page">
+            <section class="pagehero">
+                <div class="wrap"><span class="kicker">संपर्क</span>
+                    <h1>संपर्क करें</h1>
+                    <p>कार्यालय और सोशल मीडिया से संबंधित जानकारी।</p>
+                </div>
+            </section>
+            <section>
+                <div class="wrap contact">
+                    <div class="contactbox">
+                        <h2>Vikas Prince Rathore</h2>
+                        <p>अध्यक्ष — नगर पालिका परिषद सीहोर</p>
+                        <p>📍 <b>नगर पालिका कार्यालय, सीहोर (म.प्र.)</b></p>
+                        <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+                        <h2>जुड़े रहें</h2>
+                        <p>नवीनतम अपडेट के लिए सोशल मीडिया पर फ़ॉलो करें।</p>
+                        <div class="socials"><a class="social" href="https://x.com/Princerathore_o"
+                                target="_blank">Twitter / X</a></div>
+                        <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+                        <p><b>वेबसाइट डेवलपर</b><br>Kapil Sumit<br><b>+91 9516701674</b></p>
+                    </div>
+                    <div class="contactbox">
+                        <h2>समस्या या सुझाव भेजें</h2>
+                        <p>अपनी बात हम तक पहुँचाएं।</p>
+                        <form action="https://formsubmit.co/sumitmewada2003@gmail.com" method="POST"
+                            class="contact-form">
+                            <input type="text" name="Name" placeholder="आपका नाम" required>
+                            <input type="text" name="Mobile_Number" placeholder="मोबाइल नंबर" required>
+                            <textarea name="Problem_or_Suggestion" placeholder="अपनी समस्या या सुझाव लिखें..." rows="4"
+                                required></textarea>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_subject" value="New Website Submission">
+                            <button type="submit" class="btn primary" style="width:100%;margin:0">संदेश भेजें</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="wrap footgrid">
+            <div>
+                <div class="logo"><i>VR</i><span>Vikas Prince Rathore<small>नगर पालिका अध्यक्ष | सीहोर</small></span>
+                </div>
+                <p>सीहोर शहर के विकास एवं स्वच्छता के लिए समर्पित।</p>
+            </div>
+            <div>
+                <h4>त्वरित लिंक</h4>
+                <ul>
+                    <li><a href="#about">परिचय</a></li>
+                    <li><a href="#journey">यात्रा</a></li>
+                    <li><a href="#events">कार्यक्रम</a></li>
+                    <li><a href="#gallery">यादें</a></li>
+                    <li><a href="#news">समाचार</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>संसाधन</h4>
+                <ul>
+                    <li><a href="#events">कार्यक्रम</a></li>
+                    <li><a href="#contact">संपर्क</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>संपर्क</h4>
+                <p>नगर पालिका परिषद, सीहोर</p>
+            </div>
+        </div>
+        <div class="wrap bottom"><span>© <span id="year"></span> Vikas Prince Rathore Digital Platform.</span><span>जनता
+                की सेवा के लिए निर्मित।</span></div>
+    </footer>
+
+    <div class="light" id="light" onclick="closeImg()"><button class="close">×</button><img id="lightImg"></div>
+
+    <script>
+        const pages = [...document.querySelectorAll('.page')];
+        const links = [...document.querySelectorAll('.navlinks a')];
+
+        function showPage() {
+            let id = location.hash.replace('#', '') || 'home';
+            if (!document.getElementById(id)) id = 'home';
+            pages.forEach(p => p.classList.toggle('active', p.id === id));
+            links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('nav').classList.remove('mobile');
+        }
+        window.addEventListener('hashchange', showPage);
+        showPage();
+
+        function toggleMenu() { document.getElementById('nav').classList.toggle('mobile') }
+        function openImg(src) { document.getElementById('lightImg').src = src; document.getElementById('light').classList.add('show') }
+        function closeImg() { document.getElementById('light').classList.remove('show') }
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeImg() });
+    </script>
+</body>
+
+</html>
